@@ -120,6 +120,8 @@ The first metric would make sense if we are more focused on the performance over
 | Did Not Purchased Recommended Size | Count By Unique Transaction-SKU pairs | 48 | 8 | 0.166667 |
 
 
+*Note : Overlapping counts across different subsets are possible because `Purchase Recommended Size` and `Did Not Purchase Recommended Size` are not mutually exclusive. Eg. When a product purchase involves purchasing of more than 1 different sizes, it is possible for that SKUID to belong to both in the `Purchased Recommended Size` and the `Did Not Purchased Recommended Size` because the customer may have purchased both the recommended size and some other size (that was not recommended) in the same transaction.*
+
 Based on the analysis of Pixibo influenced transactions in 2019 Feb, we observe that purchases that were made in accordance to the size recommendations of Pixibo had significantly lower return rates compared to purchases that were not made in accordance to the size recommendations, regardless of whether we count by SKU alone, or by Transaction-SKU pairs.
 
 # Possible Refinements
